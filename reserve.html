@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spot Reservation</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        form div {
+            width: 250px;
+        }
+        .reservation-container{
+            margin-top: 10%;
+        }
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        input[type="time"], 
+        input[type="number"],
+        select {
+            width: 300px;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            width: 300px;
+            margin-left:40px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }  
+
+    </style>
+</head>
+<body>
+    <div class="navigation">
+        <nav class="nav-bar" id="nav-bar">
+            <img class="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZlau7ss4kuWz3N0c8VZ-xvwswfkG74dsouw&s" alt="Logo" style="width: 100px; height: auto;">
+            <ul class="nav-list" id="nav-list">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">Our Location</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="reserve.html">Online Reservation</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="reservation-container" id="reservation-container">
+       <p>Online parking spot reservation is one of our top services, allowing you to easily reserve a spot for your vehicle without any hassle. 
+        This service ensures your car is safe and secure while you’re away. To complete the reservation, please provide accurate information about yourself
+         and your vehicle. Please note that the reserved spot will be available for 1 hour from the time you submit in the form reservation date and time. 
+         Additionally, you'll need to select the desired duration of your parking when filling out the form.
+    </p> 
+    <p>feel free to contact us if you have any questions or concerns about our online reservation service and the form.  <mark>09763452145</mark></p> 
+</div>
+    <form>
+        <h5>Please fill out the form below:</h5>
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" title="Please provide your full name" required><br><br>  
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email address" title="Please provide a valid email address" required><br><br>
+        </div>
+        <div>
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" title="Please provide a valid phone number" required><br><br>
+        </div>
+        <div>
+            <label for="date">Reservation Date:</label>
+            <input type="date" id="date" name="date" title="Select the date of reservation" required><br><br>
+        </div>  
+        <div>
+            <label for="time">Reservation Time:</label>
+            <input type="time" id="time" name="time" title="Select the time of reservation" required><br><br>
+        </div> 
+        <div>
+            <label for="duration">Duration (hours):</label>
+            <input type="number" id="duration" name="duration" min="0" placeholder="Duration in hours" title="Enter the duration of your reservation in hours" required><br><br>
+        </div>  
+        <div>
+            <label for="license-plate">License Plate Number:</label>
+            <input type="text" id="license-plate" name="license-plate" placeholder="Enter your vehicle's license plate number" title="Please provide your vehicle's license plate number" required><br><br>
+        </div>
+        
+        <div>
+            <label for="vehicle-type">Vehicle Type:</label>
+            <select id="vehicle-type" name="vehicle-type" title="Select your vehicle type" required>
+                <option value="car">Car</option>
+                <option value="motorcycle">Motorcycle</option>
+                <option value="truck">Truck</option>
+                <option value="bus">Bus</option>
+                <option value="other">Other</option>
+            </select><br><br>
+        </div>
+        
+        <input type="submit" value="Reserve">
+    </form>
+    </body>
+</html>

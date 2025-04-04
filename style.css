@@ -1,0 +1,152 @@
+body {
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}  
+.navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f4f4f4;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid rgb(184, 179, 170);
+}
+img.logo{
+    max-width: 60px;
+    height: auto;
+}
+
+ul.nav-list {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0 5% 0 0;
+}
+ul.nav-list li {
+    list-style: none;
+}
+ul.nav-list li a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.811);
+    font-size: 20px;
+}
+ul.nav-list li a:hover {
+    color: blue;
+}
+ul.nav-list li a:active {
+    color: rgb(0, 0, 0);
+}
+.container {
+    margin-top: 10%;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #333;
+}
+
+p {
+    font-size: 1rem;
+    color: #666;
+    margin-top: 15px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+main {
+    padding: 40px 0 0 0;
+    background-color: #f4f4f4;
+}
+
+h4 {
+    font-size: 1.5rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.our-services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.our-services li {
+    width: 70%;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 20px;
+}
+.our-services h5 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+
+.our-services img {
+   min-width: 80%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+details {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin-top: 15px;
+}
+
+summary {
+    font-size: 1rem;
+    font-weight: bold;
+    color: rgb(17, 121, 87);
+    cursor: pointer;
+}
+
+details p {
+    font-size: 0.95rem;
+    color: #282bf0;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul li {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+footer {
+    width: 99.0%;
+    left: 0;
+    bottom: 0;
+    padding: 20px;
+    text-align: center;
+    background-color: #333;
+    color: white;
+    margin-top: 50px;
+}
+footer p {
+    color:white;
+
+}

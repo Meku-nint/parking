@@ -4,59 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>vehicle</title>
-    <style>
-        .nav-bar{
-            padding: 0px 0px 10px 0px;
-            border-bottom: 2px solid rgb(184, 179, 170);
-
-        }
-        ul.nav-list{
-            display: flex;
-            gap: 20px;
-            align-items: center;
-            justify-content:center;
-            padding: 0;
-            margin: 0;
-        }
-        ul.nav-list li{
-            list-style: none;
-
-        }
-        ul.nav-list li a{
-            text-decoration: none;
-            color: rgba(0, 0, 0, 0.811);
-            font-size: 20px;
-        }
-        ul.nav-list li a:hover{
-            color: blue;
-        }
-       
-    </style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
+   <div class="navigation">
     <nav class="nav-bar" id="nav-bar">
-        <img src="images/logo.png" alt="Logo" style="width: 100px; height: auto;">
+        <img class="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZlau7ss4kuWz3N0c8VZ-xvwswfkG74dsouw&s" alt="Logo" style="width: 100px; height: auto;">
         <ul class="nav-list" id="nav-list">
-            <li><a href="home.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</li>
-            <li><a href="reserve.html">online reservation</a></li>
+            <li><a href="home.html" onclick="">Home</a></li>
+            <li><a href="about.html">Our Location</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="reserve.html">Online Reservation</a></li>
             <li><a href="login.html">Login</a></li>
         </ul>
     </nav>
+  </div>
     <div class="container" id="container">
         <h2>Welcome to Your Smart, Secure, and Safe Vehicle Parking Solution</h2>
-       <p>
-        We are delighted to welcome you to a new era of parking! Our platform offers a smart, secure, and safe parking experience designed to give you peace of mind every time you park. Whether you're looking for a convenient spot or a system that ensures your vehicle’s safety, we've got you covered.
+        <p>
+            We are delighted to welcome you to a new era of parking! Our platform offers a smart, secure, and safe parking experience designed to give you peace of mind every time you park. Whether you're looking for a convenient spot or a system that ensures your vehicle’s safety, we've got you covered.
+        </p>
     </div>
     <main>
-        <h4>Our services are:</h4>
-        <ul>
+        <h4>Our Services Are:</h4>
+        <ul class="our-services" id="our-services">
             <li>
                 <h5>Smart Parking Solution</h5>
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_EJf1vPwvWMtdoeR12KHBeg4-Je9cKrnZTA&s" alt="image opening problem">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_EJf1vPwvWMtdoeR12KHBeg4-Je9cKrnZTA&s" alt="Smart Parking Solution">
                 <details>
-                    <summary><strong>Click to learn more about Smart Parking Solution</strong></summary>
+                    <summary><strong>Click to see more about Smart Parking Solution</strong></summary>
                     <p>A smart parking solution uses technology like IoT sensors and real-time data to help drivers find available parking spaces, reducing traffic congestion and emissions. With features such as live updates, automated payments, and dynamic pricing, this system enhances urban parking efficiency and convenience.</p>
                     <ul>
                         <li>Real-time parking availability</li>
@@ -69,9 +45,9 @@
             
             <li>
                 <h5>Secure Vehicle Storage</h5>
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_EJf1vPwvWMtdoeR12KHBeg4-Je9cKrnZTA&s" alt="Secure vehicle storage image">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_EJf1vPwvWMtdoeR12KHBeg4-Je9cKrnZTA&s" alt="Secure Vehicle Storage">
                 <details>
-                    <summary><strong>Click to learn more about Secure Vehicle Storage</strong></summary>
+                    <summary><strong>Click to see more about Secure Vehicle Storage</strong></summary>
                     <p>Our secure vehicle storage service ensures that your vehicle is protected in a safe and monitored environment. With advanced security features, you can have peace of mind knowing your vehicle is in good hands.</p>
                     <ul>
                         <li>24/7 surveillance and monitoring</li>
@@ -84,9 +60,9 @@
             
             <li>
                 <h5>Safety Monitoring Systems</h5>
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_EJf1vPwvWMtdoeR12KHBeg4-Je9cKrnZTA&s" alt="Safety monitoring systems image">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_EJf1vPwvWMtdoeR12KHBeg4-Je9cKrnZTA&s" alt="Safety Monitoring Systems">
                 <details>
-                    <summary><strong>Click to learn more about Safety Monitoring Systems</strong></summary>
+                    <summary><strong>Click to see more about Safety Monitoring Systems</strong></summary>
                     <p>Our safety monitoring systems provide real-time alerts and proactive measures to ensure the safety of your vehicles. Whether you're parking in a garage or using our storage services, we've got you covered with cutting-edge security technology.</p>
                     <ul>
                         <li>Real-time monitoring with instant alerts</li>
@@ -99,9 +75,9 @@
             
             <li>
                 <h5>24/7 Customer Support</h5>
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_EJf1vPwvWMtdoeR12KHBeg4-Je9cKrnZTA&s" alt="24/7 customer support image">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_EJf1vPwvWMtdoeR12KHBeg4-Je9cKrnZTA&s" alt="24/7 Customer Support">
                 <details>
-                    <summary><strong>Click to learn more about 24/7 Customer Support</strong></summary>
+                    <summary><strong>Click to see more about 24/7 Customer Support</strong></summary>
                     <p>Our customer support team is available 24/7 to assist you with any inquiries or issues. Whether you need help with parking, vehicle storage, or any of our services, we are just a call away.</p>
                     <ul>
                         <li>24/7 phone and online support</li>
@@ -111,13 +87,12 @@
                     </ul>
                 </details>
             </li>
-    
-            <!-- New Service: Premium Parking System -->
+            
             <li>
                 <h5>Premium Parking System</h5>
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_EJf1vPwvWMtdoeR12KHBeg4-Je9cKrnZTA&s" alt="Premium Parking System image">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_EJf1vPwvWMtdoeR12KHBeg4-Je9cKrnZTA&s" alt="Premium Parking System">
                 <details>
-                    <summary><strong>Click to learn more about Premium Parking System</strong></summary>
+                    <summary><strong>Click to see more about Premium Parking System</strong></summary>
                     <p>Our Premium Parking System is designed for those who want extra convenience and luxury. With this service, you can enjoy additional perks such as vehicle care and other personalized services for an enhanced experience.</p>
                     <ul>
                         <li>Car washing service</li>
@@ -125,14 +100,14 @@
                         <li>Electric vehicle charging station (if applicable)</li>
                         <li>Priority parking spots</li>
                         <li>Additional charges for electric and other vehicles</li>
-                        <li><strong>Special Offer:</strong> Use our Premium Parking Service for 14 consecutive days, and get one day of parking free! </li>
+                        <li><strong>Special Offer:</strong> Use our Premium Parking Service for 14 consecutive days, and get one day of parking free!</li>
                     </ul>
                 </details>
             </li>
         </ul>
-    </main> 
+    </main>
     <footer>
-
-    </footer>   
+        <p>© 2025 Vehicle Parking Solutions. All rights reserved.</p>
+    </footer>
 </body>
 </html>
