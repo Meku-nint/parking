@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animation</title>
+    <style>
+        /* Define the keyframes */
+        @keyframes moveRight {
+            0% {
+                transform: translateX(0);
+                background-color: red;
+            }
+            100% {
+                transform: translateX(300px);
+                background-color: blue;
+            }
+        }
+
+        /* Apply the animation to an element */
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            animation: moveRight 2s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
