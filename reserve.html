@@ -4,9 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spot Reservation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <style>
         form {
+            margin: 10px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 1rem;
+            color: #333;
+            font-style: italic;
+            width: 400px;
+            max-width: 90%;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -14,11 +27,22 @@
         form div {
             width: 250px;
         }
+        form h5 {
+            font-size: 1.5rem;
+            color: #333;
+            font-weight: lighter;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            text-align: center;
+            margin-bottom: 20px;
+        }
         .reservation-container{
             margin-top: 10%;
         }
         label {
+            color: #333;
             font-weight: bold;
+            font-family: 'Times New Roman', Times, serif;
+            font-style: italic;
             margin-bottom: 5px;
         }
         input[type="text"],
@@ -28,9 +52,11 @@
         input[type="time"], 
         input[type="number"],
         select {
+            font-family: Georgia, 'Times New Roman', Times, serif;
             width: 300px;
             padding: 10px;
-            margin-bottom: 15px;
+            margin-bottom: 0px;
+            font-size: 1rem;
             border: 1px solid #ccc;
             border-radius: 5px;
         }
@@ -46,7 +72,15 @@
         input[type="submit"]:hover {
             background-color: #45a049;
         }  
-
+        .reservation-container p{
+            margin: 0 20px;
+            font-size: 1.2rem;
+            color: #333;
+            width: 90%;
+            margin: auto;
+            font-style: italic;
+            font-family: 'Times New Roman', Times, serif;
+        }
     </style>
 </head>
 <body>
@@ -54,14 +88,14 @@
         <nav class="nav-bar" id="nav-bar">
             <img class="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZlau7ss4kuWz3N0c8VZ-xvwswfkG74dsouw&s" alt="Logo" style="width: 100px; height: auto;">
             <ul class="nav-list" id="nav-list">
-                <li><a href="home.html">Home</a></li>
-                <li><a href="about.html">Our Location</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="reserve.html">Online Reservation</a></li>
-                <li><a href="login.html">Login</a></li>
+                <li><a href="home.html" onclick=""><i class="fas fa-home"></i>Home</a></li>
+                <li><a href="about.html"><i class="fa-solid fa-location-dot"></i>Our Location</a></li>
+                <li><a href="contact.html"><i class="fas fa-phone"></i>Contact</a></li>
+                <li><a href="reserve.html"><i class="fas fa-car"></i>Online Reservation</a></li>
+                <li><a href="login.html"><i class="fas fa-user"></i>Login</a></li>
             </ul>
         </nav>
-    </div>
+ </div>
     <div class="reservation-container" id="reservation-container">
        <p>Online parking spot reservation is one of our top services, allowing you to easily reserve a spot for your vehicle without any hassle. 
         This service ensures your car is safe and secure while you’re away. To complete the reservation, please provide accurate information about yourself
@@ -111,8 +145,13 @@
                 <option value="other">Other</option>
             </select><br><br>
         </div>
-        
+        <div class="premium-parking">
+            <input type="checkbox" id="terms" name="terms" value="premium">  premium parking spot
+        </div>
         <input type="submit" value="Reserve">
     </form>
+    <footer>
+        <p>© 2025 Vehicle Parking Solutions. All rights reserved.</p>
+    </footer>
     </body>
 </html>
