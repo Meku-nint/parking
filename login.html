@@ -6,6 +6,52 @@
     <title>check your spot</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <style>
+       .check-spot-container {
+           padding-top: 5%;
+       }
+       .page-detail {
+           width: 90%;
+           margin: auto;
+           text-align: center;
+              font-family: 'Times New Roman', Times, serif;
+              font-size: 1.2rem;
+              color: #333;
+              font-style: italic;
+       }
+       form {
+            margin: 10px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 1rem;
+            color: #333;
+            font-style: italic;
+            max-width: 60%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        form input,button {
+            width: 300px;
+            padding: 10px;
+            margin-bottom: 10px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+           
+        }
+        form label {
+            text-align: left;
+            font-family: 'Times New Roman', Times, serif;
+            font-style: italic;
+            margin-bottom: 5px;
+            font-size: 18px;
+        }
+    </style>
 </head>
 <body>
     <div class="navigation">
@@ -19,6 +65,26 @@
                 <li><a href="login.html"><i class="fas fa-user"></i>Login</a></li>
             </ul>
         </nav>
+ </div>
+ <div class="check-spot-container" id="check-spot-container">
+    <div class="page-detail">
+        <h1>Check Your Spot</h1>
+        <p>This login page allows you to check your parking spot status easily. 
+            To get started, simply enter your license plate number, spot number, and unique ID.
+             This will help you quickly verify if your spot is available or already taken. 
+             Make sure to have your details ready for a seamless experience.
+              Your spot information is just a few clicks away!</p>
+    </div>
+    <form >
+        <label for ="license_plate">Enter your license plate:</label>
+        <input type="text" id="license_plate" name="license_plate" required placeholder="Enter your license plate">
+        <label for="spot_number">Enter your spot number:</label>
+        <input type="text" id="spot_number" name="spot_number" required placeholder="Enter your spot number">
+        <label for="id">Unique ID:</label>
+        <input type="text" id="id" name="id" required placeholder="Enter your unique ID">
+        <button type="submit">Check</button>
+
+    </form>
  </div>
  <footer>
     <p>© 2025 Vehicle Parking Solutions. All rights reserved.</p>
