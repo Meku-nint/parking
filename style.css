@@ -7,6 +7,7 @@ body {
 .navigation {
     position: fixed;
     top: 0;
+    margin-bottom: 2000px;
     left: 0;
     width: 100%;
     background-color: #f4f4f4;
@@ -62,4 +63,22 @@ footer p {
 }
 li a i{
     color: blue;
+}
+@media screen and (max-width: 768px) {
+    .nav-bar {
+        flex-direction: row;
+        align-items: center;
+    }
+    ul.nav-list {
+        flex-direction: row;
+        gap: 10px;
+    }
+    ul.nav-list li a {
+        font-size: 14px;
+    }
+    footer{
+        font-size: 12px;
+        padding: 10px;
+        margin-top: 150px;
+    }
 }

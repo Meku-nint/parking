@@ -87,6 +87,34 @@
             font-style: italic;
             font-family: 'Times New Roman', Times, serif;
         }
+        @media screen and (max-width: 768px) {
+            form {
+                width: 80%;
+                margin-top: 40px;
+            }
+            form input, select {
+                max-width: 100%;
+            }
+            .reservation-container p{
+                font-size: 1rem;
+                width: 96%;
+            }
+            .reservation-container{
+                margin-top: 12%;
+            }
+           #reserve-button{
+                width: 80%;
+                padding: 10px;
+                margin:5px;
+                font-size: 1rem;
+                border-radius: 5px;
+                cursor: pointer;
+                background-color: #4CAF50;
+                color: white;
+                border: none;
+                transition: background-color 0.3s ease;
+            }
+        }
     </style>
 </head>
 <body>
@@ -139,7 +167,7 @@
         </div>  
         <div>
             <label for="license-plate">License Plate Number:</label>
-            <input type="text" id="license-plate" name="license-plate" placeholder="Enter your vehicle's license plate number" title="Please provide your vehicle's license plate number" required><br><br>
+            <input type="text" id="license-plate" name="license-plate" placeholder="Enter  license plate number" title="Please provide your vehicle's license plate number" required><br><br>
         </div>
         
         <div>
@@ -155,7 +183,7 @@
         <div class="premium-parking">
             <input type="checkbox" id="terms" name="terms" value="premium">  premium parking spot
         </div>
-        <input type="submit" value="Reserve">
+        <button type="submit" id="reserve-button">Reserve</button>
     </form>
 </div>
    
