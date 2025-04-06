@@ -61,24 +61,27 @@ footer p {
     color:white;
 
 }
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    margin-right: 20px;
+  
+}
 li a i{
     color: blue;
 }
 @media screen and (max-width: 768px) {
-    .nav-bar {
-        flex-direction: row;
-        align-items: center;
+    #nav-list {
+        display: none;
     }
-    ul.nav-list {
-        flex-direction: row;
-        gap: 10px;
+    .menu-icon{
+        display: block;
+        font-size: 30px;
+        margin: 10px;
+        text-align: center;
+        cursor: pointer;
     }
-    ul.nav-list li a {
-        font-size: 14px;
-    }
-    footer{
-        font-size: 12px;
-        padding: 10px;
-        margin-top: 150px;
+     .logo{
+        margin-right: 100px;
     }
 }
