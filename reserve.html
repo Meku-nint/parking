@@ -129,12 +129,44 @@
                 transition: background-color 0.3s ease;
             }
              }
+        #reserve-button {
+        width: 300px;
+        margin-top: 5px;
+        padding: 10px;
+        border: none;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 1.2rem;
+             }
+        #reserve-button:hover {
+            background-color: #45a049;
+        }
+        .controller{
+            display:none;
+        }
+        .dropdown{
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: 2rem;
+            font-weight: bold;
+            color:green;
+            width: 300px;
+            padding: 0px;
+            border: none;
+            margin-top: -10px;
+            margin-left: 90px;
+            margin-bottom: 0px;
+        }
+        h6:hover{
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
     <div class="navigation">
         <nav class="nav-bar" id="nav-bar">
             <img class="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZlau7ss4kuWz3N0c8VZ-xvwswfkG74dsouw&s" alt="Logo" style="width: 100px; height: auto;">
+            <li id="menu-icon" class="menu-icon"><i class="fas fa-bars"></i> </li>
             <ul class="nav-list" id="nav-list">
                 <li><a href="home.html" onclick=""><i class="fas fa-home"></i>Home</a></li>
                 <li><a href="https://maps.windows.com/?form=WNAMSH&lvl=13.019105&cp=9.056551~38.703045&sty=3d&trfc=1" target="_blank"><i class="fa-solid fa-location-dot"></i>Our Location</a></li>
@@ -171,10 +203,12 @@
             <label for="date">Reservation Date:</label>
             <input type="date" id="date" name="date" title="Select the date of reservation" required><br><br>
         </div>  
+        <h6 class="dropdown"id ="dropdown" onclick="toggleController()"><i class="fa-solid fa-caret-down"></i></h6>
+    <div class="controller">
         <div>
             <label for="time">Reservation Time:</label>
             <input type="time" id="time" name="time" title="Select the time of reservation" required><br><br>
-        </div> 
+        </div>
         <div>
             <label for="duration">Duration (hours):</label>
             <input type="number" id="duration" name="duration" min="0" placeholder="Duration in hours" title="Enter the duration of your reservation in hours" required><br><br>
@@ -198,11 +232,24 @@
             <input type="checkbox" id="terms" name="terms" value="premium">  premium parking spot
         </div>
         <button type="submit" id="reserve-button">Reserve</button>
+    </div>
     </form>
 </div>
    
     <footer>
         <p>© 2025 Vehicle Parking Solutions. All rights reserved.</p>
     </footer>
+    <script>
+        function toggleController() {
+            var controller = document.querySelector('.controller');
+            if (controller.style.display === "none" || controller.style.display === "") {
+                controller.style.display = "block";
+            } else {
+                controller.style.display = "none";
+            }
+        }
+      
+    </script>
     </body>
+    <script src="NavBar.js"></script>
 </html>

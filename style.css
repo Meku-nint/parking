@@ -73,6 +73,29 @@ li a i{
 @media screen and (max-width: 768px) {
     #nav-list {
         display: none;
+        width: 100%;
+        background-color: #b4bdba;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 1;
+        padding: 10px;
+    }
+    #nav-list li {
+        display: block;
+        margin: 5px 0;
+        padding: 5px;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 18px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    #nav-list li:hover{
+        color: blue;
+        width: fit-content;
+        background-color: #f4f4f4;
+        border-radius: 5px;
     }
     .menu-icon{
         display: block;
@@ -83,5 +106,17 @@ li a i{
     }
      .logo{
         margin-right: 100px;
+    }
+    .footer{
+        width: 100%;
+        color: white;
+        text-align: center;
+        padding: 10px;
+    }
+    .footer p{
+        color: white;
+        font-size: smaller;
+        font-family: 'Times New Roman', Times, serif;
+        font-style: italic;
     }
 }
