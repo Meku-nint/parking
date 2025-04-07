@@ -18,6 +18,12 @@ body {
     justify-content: space-between;
     border-bottom: 2px solid rgb(184, 179, 170);
 }
+#nav-list li a:hover{
+    color: blue;
+    width: fit-content;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+}
 img.logo{
     max-width: 60px;
     height: auto;
@@ -99,6 +105,12 @@ li a i{
     }
     #nav-list li a i{
         padding: 0 5px 0 5px;
+    }
+    #nav-list li a:hover{
+        color: blue;
+        width: fit-content;
+        background-color: #f4f4f4;
+        border-radius: 5px;
     }
     .menu-icon{
         display: block;
