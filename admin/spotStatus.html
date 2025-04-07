@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>spot status</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet"href="style.css">
+    <style>
+      /* For devices with a max-width of 768px (Mobile devices) */
+@media screen and (max-width: 768px) {
+    .spot-status {
+        padding-top: 15%;
+        text-align: center;
+    }
+    .spot-status h1 {
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 2rem;
+        color: #333;
+        font-style: italic;
+    }
+    .spot-status p {
+        width: 95%;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 1.2rem;
+        color: #333;
+    }
+    .spot-status li {
+        list-style-type: none;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    #available-spots {
+        background-color: rgb(22, 186, 106);
+        padding: 15px;
+        width: 60%;
+        margin: auto;
+        border-radius: 8px;
+        color: white;
+    }
+    #occupied-spots {
+        background-color: rgb(186, 22, 22);
+        padding: 15px;
+        width: 60%;
+        margin: auto;
+        border-radius: 8px;
+        color: white;
+    }
+    .reserve-button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        margin-top: 20px;
+    }
+}
+
+/* For devices with a max-width of 1024px (Tablets, smaller laptops) */
+@media screen and (max-width: 1024px) {
+    .spot-status {
+        padding-top: 10%;
+        text-align: center;
+    }
+    .spot-status h1 {
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 2.5rem;
+        color: #333;
+        font-style: italic;
+    }
+    .spot-status p {
+        width: 90%;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 1.3rem;
+        color: #333;
+    }
+    .spot-status li {
+        list-style-type: none;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    #available-spots, #occupied-spots {
+        padding: 20px;
+        width: 70%;
+        margin: auto;
+        border-radius: 8px;
+    }
+    .reserve-button {
+        display: inline-block;
+        padding: 12px 25px;
+        background-color: #007bff;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        margin-top: 20px;
+    }
+}
+
+/* For devices larger than 1024px (Desktops, large tablets, and laptops) */
+@media screen and (min-width: 1025px) {
+    .spot-status {
+        padding-top: 5%;
+        text-align: center;
+    }
+    .spot-status h1 {
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 3rem;
+        color: #333;
+        font-style: italic;
+    }
+    .spot-status p {
+        width: 80%;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 1.5rem;
+        color: #333;
+    }
+    .spot-status li {
+        list-style-type: none;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    #available-spots, #occupied-spots {
+        padding: 25px;
+        width: 50%;
+        margin: auto;
+        border-radius: 8px;
+    }
+    .reserve-button {
+        display: inline-block;
+        padding: 14px 30px;
+        background-color: #007bff;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        margin-top: 20px;
+    }
+}
+
+       
+    </style>
+</head>
+<body>
+  <div class="navigation">
+        <nav class="nav-bar" id="nav-bar">
+            <img class="logo" id="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZlau7ss4kuWz3N0c8VZ-xvwswfkG74dsouw&s" alt="Logo" style="width: 100px; height: auto;">
+            <li id="menu-icon" class="menu-icon"><i class="fas fa-bars"></i> </li>
+            <ul class="nav-list" id="nav-list">
+                <li><a href="adminPage.html"><i class="fas fa-home"></i>Home</a></li>
+                <li><a href="spotStatus.html"><i class="fas fa-info-circle"></i>Spot Status</a></li>
+                <li><a href="dailyReport.html"><i class="fas fa-chart-line"></i>Daily Report</a></li>
+                <li><a href="acceptPayment.html"><i class="fas fa-credit-card"></i>Process Payment</a></li>
+                <li><a href="setPrice.html"><i class="fas fa-dollar-sign"></i>Set Price per Hour</a></li>
+                <li><a href="currentOccupancy.html"><i class="fas fa-users"></i>Current Occupancy</a></li>
+                <li><a href="login.html"><i class="fas fa-user"></i>Logout</a></li>
+            </ul>
+        </nav>
+    </div> 
+    <div class="spot-status">
+     <h1>Spot Status</h1>
+     <p>This page displays the status of available and occupied parking spots and also the total number of available and occupied spots we can also reserve spots.</p>
+     <div class="status-container">
+        <h2>Available Spots</h2>
+        <ul id="available-spots">
+            <li>Spot 1</li>
+            <li>Spot 2</li>
+            <li>Spot 3</li>
+            <li>Spot 4</li>
+        </ul>
+        <h2>Occupied Spots</h2>
+        <ul id="occupied-spots">
+            <li>Spot 5</li>
+            <li>Spot 6</li>
+            <li>Spot 7</li>
+        </ul>
+
+    <a href="reserve.html" class="reserve-button">reserve spots</a>
+    </div>
+    </div>
+    <footer class="footer" id="footer">
+        <p>© 2025 Vehicle Parking Solutions. All rights reserved.</p>
+    </footer>
+    <script src="NavBar.js"></script>
+</body>
+</html>
