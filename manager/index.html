@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Manager Dashboard</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    .container {
+      width: 250px;
+      background-color: #333;
+      color: white;
+      position: fixed;
+      height: 100%;
+      top: 0;
+      left: 0;
+      overflow: auto;
+    }
+
+    .logo img {
+      width: 100%;
+      height: auto;
+    }
+
+    .container ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .container ul li {
+      padding: 15px 20px;
+    }
+
+    .container ul li a {
+      color: white;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+    }
+
+    .container ul li a i {
+      color: rgb(14, 221, 114);
+      margin-right: 10px;
+    }
+
+    .container ul li:hover {
+      background-color: #575757;
+    }
+
+    .content {
+      margin-left: 270px;
+      padding: 30px;
+    }
+
+    .content h2 {
+      color: #0edd72;
+    }
+
+    img[alt="the image is not displayed"] {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin: 20px 0;
+    }
+
+    .section {
+      margin-top: 40px;
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .section textarea {
+      width: 100%;
+      padding: 10px;
+      font-size: 1rem;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      resize: vertical;
+    }
+
+    .btn {
+      background-color: #0edd72;
+      color: white;
+      padding: 10px 20px;
+      margin-top: 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #0bb15c;
+    }
+
+    #post-message {
+      font-size: 1.2rem;
+      margin-top: 15px;
+      color: #0edd72;
+    }
+
+    #see-reports {
+      display: none;
+    }
+
+    @media screen and (max-width: 768px) {
+      .container {
+        width: 100%;
+        position: relative;
+      }
+
+      .content {
+        margin-left: 0;
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">
+      <img src="https://cdn.pixabay.com/photo/2018/08/04/11/30/draw-3583548_640.png" alt="Logo" />
+    </div>
+    <ul>
+      <li><a href="#home"><i class="fas fa-home"></i>Home</a></li>
+      <li><a href="#see-reports" id="see-reports-link"><i class="fas fa-chart-line"></i>See Reports</a></li>
+      <li><a href="#post"><i class="fas fa-upload"></i>Upload Something</a></li>
+      <li><a href="#manage-admin"><i class="fas fa-users-cog"></i>Manage Admins</a></li>
+      <li><a href="#logout"><i class="fas fa-sign-out-alt"></i>Logout</a></li>
+    </ul>
+  </div>
+
+  <div class="content">
+    <h2>Smart Parking</h2>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZlau7ss4kuWz3N0c8VZ-xvwswfkG74dsouw&s" alt="the image is not displayed" />
+    <div class="section" id="see-reports">
+      <h3>Reports</h3>
+      <p>Here you can see the reports of the parking system.</p>
+      <button class="btn">View Full Report</button>
+    </div>
+    <div class="section" id="upload-something">
+      <h3>Post Something for Admins</h3>
+      <textarea id="post" rows="4" placeholder="Write something for admins..."></textarea>
+      <br />
+      <button class="btn" id="post-button">Post</button>
+      <div id="post-message"></div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("see-reports-link").addEventListener("click", function () {
+      document.getElementById("see-reports").style.display = "block";
+      document.getElementById("see-reports").scrollIntoView({ behavior: "smooth" });
+    });
+    document.getElementById("post-button").addEventListener("click", function () {
+      const postContent = document.getElementById("post").value.trim();
+      const postMessage = document.getElementById("post-message");
+
+      if (postContent) {
+        postMessage.innerText = "Post submitted successfully!";
+        postMessage.style.color = "#0edd72";
+        console.log("Post content:", postContent);
+      } else {
+        postMessage.innerText = "Please write something before posting.";
+        postMessage.style.color = "red";
+        console.log("Post content is empty.");
+      }
+    });
+  </script>
+</body>
+</html>
