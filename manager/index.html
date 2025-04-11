@@ -6,12 +6,57 @@
   <title>Manager Dashboard</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
-    }
+  body{
+    padding: 0;
+    margin: 0;
+  }
+    .manage-admin {
+  padding: 20px;
+  border: 1px solid #ddd;
+  width: 300px;
+  margin: 20px auto;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
 
+.manage-admin button {
+  margin: 10px;
+  padding: 10px;
+  border: none;
+  background-color: #007BFF;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.manage-admin button:hover {
+  background-color: #0056b3;
+}
+
+.manage-admin .form-container {
+  margin-top: 10px;
+}
+
+.manage-admin input, select {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+.manage-admin input[type="text"], input[type="email"] {
+  font-size: 16px;
+}
+
+.manage-admin select {
+  font-size: 16px;
+}
+
+.manage-admin h3 {
+  margin-bottom: 10px;
+}
     .container {
       width: 250px;
       background-color: #333;
@@ -94,7 +139,7 @@
       border: none;
       border-radius: 4px;
       cursor: pointer;
-      transition: background 0.3s;
+      transition: background 3s;
     }
 
     .btn:hover {
@@ -106,22 +151,101 @@
       margin-top: 15px;
       color: #0edd72;
     }
-
-    #see-reports {
-      display: none;
+    .footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
     }
-
+    .footer p {
+      font-size: 14px;
+      margin: 0;
+    }
+   
     @media screen and (max-width: 768px) {
       .container {
         width: 100%;
         position: relative;
       }
+      .image-text img{
+        display: none;
+      }
+      .image-text p{
+        word-break: break-all;
+      }
 
+      .container img {
+        display: none;
+      }
       .content {
         margin-left: 0;
         padding: 20px;
       }
     }
+    .home{
+        gap: 50px;
+        font-family: 'Times New Roman', Times, serif;
+        max-width: 90%;
+        margin: auto;
+        }
+        .home .data p{
+          text-align: center;
+          padding: 30px;
+          box-shadow: 2px 2px 2px 2px rgb(156, 149, 149);
+          font-family: 'Times New Roman', Times, serif;
+          font-size: 25px;
+          font-weight: lighter;
+          border-left: 3px solid #075e31;
+          border-radius: 20px;
+        }
+        .image-text{
+          box-sizing:content-box;
+          padding: 10px;
+          background-color: rgb(192, 192, 234);
+          display: flex;
+          justify-content: space-evenly;
+          gap: 19%;
+        }
+        .image-text p{
+          font-size: 20px;
+          font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+          font-display:fallback;
+
+        }
+  .bar{
+    padding: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: lighter;
+   margin: auto;
+   background-color: rgb(4, 11, 72);
+   text-align: center;
+   color: white;
+
+  }
+  .reports ul{
+  padding: 10px;
+  border-left:12px solid #075e31;
+  background-color: #f4f4f4;
+  }
+  .reports ul li{
+    list-style-type: none;
+    padding: 10px;
+    background-color:white;
+    margin: 3px;
+    border: 1px solid rgb(201, 190, 190);
+  }
+  ul li button{
+    float: right;
+    background-color:black;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
   </style>
 </head>
 <body>
@@ -130,21 +254,26 @@
       <img src="https://cdn.pixabay.com/photo/2018/08/04/11/30/draw-3583548_640.png" alt="Logo" />
     </div>
     <ul>
-      <li><a href="#home"><i class="fas fa-home"></i>Home</a></li>
-      <li><a href="#see-reports" id="see-reports-link"><i class="fas fa-chart-line"></i>See Reports</a></li>
-      <li><a href="#post"><i class="fas fa-upload"></i>Upload Something</a></li>
-      <li><a href="#manage-admin"><i class="fas fa-users-cog"></i>Manage Admins</a></li>
+      <li onclick="controlHome()"><a href="#home"><i class="fas fa-home"></i>Home</a></li>
+      <li onclick="controlReport()"><a href="#see-reports" id="see-reports-link"><i class="fas fa-chart-line"></i>See Reports</a></li>
+      <li onclick="controlPost()"><a href="#post"><i class="fas fa-upload"></i>Upload Something</a></li>
+      <li onclick="controlManageAdmin()"><a href="#manage-admin"><i class="fas fa-users-cog"></i>Manage Admins</a></li>
       <li><a href="#logout"><i class="fas fa-sign-out-alt"></i>Logout</a></li>
     </ul>
   </div>
-
-  <div class="content">
-    <h2>Smart Parking</h2>
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZlau7ss4kuWz3N0c8VZ-xvwswfkG74dsouw&s" alt="the image is not displayed" />
+  <h2 class="bar">Welcome to the main parking manager page </h2>
+  <div class="content"id="content">
     <div class="section" id="see-reports">
       <h3>Reports</h3>
       <p>Here you can see the reports of the parking system.</p>
-      <button class="btn">View Full Report</button>
+      <div class="reports">
+        <ul>
+          <li>here is report one <button>delete</button></li>
+          <li>here is report one <button>delete</button></li>
+          <li>here is report one <button>delete</button></li>
+        </ul>
+      </div>
+      <button class="btn">View more Report</button>
     </div>
     <div class="section" id="upload-something">
       <h3>Post Something for Admins</h3>
@@ -153,27 +282,104 @@
       <button class="btn" id="post-button">Post</button>
       <div id="post-message"></div>
     </div>
+
+    <div id="home"class="home">
+      <div class="image-text">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZlau7ss4kuWz3N0c8VZ-xvwswfkG74dsouw&s" alt="Admin Image">
+        <p>on this page the parking administrator can see reports,post reminder for admins ,manage admins
+           it may be material lose/demolished,customer feedbacks and also it may be joke and others. </p>
+      </div>
+      <div class="data"id="data">
+        <p class="staff-number" id="staff-number">more than 100 staff worker</p>
+        <p class="daily-user">more than 100 user with in a day</p>
+        <p class="add">we will add some thing</p>
+      </div>
+    </div>
+    <div class="manage-admin" id="manage-admin">
+      <button id="add-admin-btn">Add admin</button>
+      <button id="edit-admin-btn">See and edit admin</button>
+    
+      <!-- Form for adding admin -->
+      <div id="add-admin-form" class="form-container" style="display: none;">
+        <h3>Add Admin</h3>
+        <input type="text" id="admin-name" placeholder="Enter name" />
+        <input type="email" id="admin-email" placeholder="Enter email" />
+        <button id="submit-add">Submit</button>
+      </div>
+    
+      <!-- Form for editing admin -->
+      <div id="edit-admin-form" class="form-container" style="display: none;">
+        <h3>Edit Admin</h3>
+        <select id="admin-list">
+          <!-- Options will be added dynamically -->
+          <option value="">Select admin to edit</option>
+        </select>
+        <button id="submit-edit">Edit</button>
+      </div>
+    </div>
+    
   </div>
-
+  <footer class="footer" id="footer">
+    <p>© 2025 Vehicle Parking Solutions. All rights reserved.</p>
+</footer>
   <script>
-    document.getElementById("see-reports-link").addEventListener("click", function () {
+    window.onload = controlHome();
+    function controlReport() {
+      document.getElementById("manage-admin").style.display="none";
       document.getElementById("see-reports").style.display = "block";
-      document.getElementById("see-reports").scrollIntoView({ behavior: "smooth" });
-    });
-    document.getElementById("post-button").addEventListener("click", function () {
-      const postContent = document.getElementById("post").value.trim();
-      const postMessage = document.getElementById("post-message");
+      document.getElementById("upload-something").style.display = "none";
+      document.getElementById("post-message").style.display = "none";
+      document.getElementById('home').style.display="none";
+    }
+    function controlManageAdmin(){
+      document.getElementById("manage-admin").style.display="block";
+      document.getElementById("see-reports").style.display = "none";
+      document.getElementById("upload-something").style.display = "none";
+      document.getElementById("post-message").style.display = "none";
+      document.getElementById('home').style.display="none";
+    }
+    function controlPost() {
+      document.getElementById("manage-admin").style.display="none";
+      document.getElementById("see-reports").style.display = "none";
+      document.getElementById("upload-something").style.display = "block";
+      document.getElementById("post-message").style.display = "none";
+      document.getElementById('home').style.display="none";
 
-      if (postContent) {
-        postMessage.innerText = "Post submitted successfully!";
-        postMessage.style.color = "#0edd72";
-        console.log("Post content:", postContent);
-      } else {
-        postMessage.innerText = "Please write something before posting.";
-        postMessage.style.color = "red";
-        console.log("Post content is empty.");
-      }
-    });
+    }
+    document.getElementById('add-admin-btn').addEventListener('click', function() {
+  // Hide other forms and show the "Add admin" form
+  document.getElementById('add-admin-form').style.display = 'block';
+  document.getElementById('edit-admin-form').style.display = 'none';
+});
+
+document.getElementById('edit-admin-btn').addEventListener('click', function() {
+  // Hide other forms and show the "Edit admin" form
+  document.getElementById('edit-admin-form').style.display = 'block';
+  document.getElementById('add-admin-form').style.display = 'none';
+});
+
+document.getElementById('submit-add').addEventListener('click', function() {
+  const adminName = document.getElementById('admin-name').value;
+  const adminEmail = document.getElementById('admin-email').value;
+
+  console.log('Adding admin:', adminName, adminEmail);
+  // Implement your admin addition logic here
+});
+
+document.getElementById('submit-edit').addEventListener('click', function() {
+  const selectedAdmin = document.getElementById('admin-list').value;
+
+  console.log('Editing admin:', selectedAdmin);
+  // Implement your admin editing logic here
+});
+
+    function controlHome() {
+      document.getElementById("manage-admin").style.display="none";
+      document.getElementById('home').style.display="block";
+      document.getElementById("see-reports").style.display = "none";
+      document.getElementById("upload-something").style.display = "none";
+      document.getElementById("post-message").style.display = "none";
+    }
   </script>
 </body>
 </html>
